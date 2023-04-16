@@ -1,5 +1,5 @@
 import { Buildings, GithubLogo, Link, Users } from "phosphor-react";
-import avatar from "../../assets/avatar.png";
+import avatar from "../../../assets/avatar.png";
 import { Description, Footer, Header, ProfileContainer, ProfileContent } from "./styles";
 
 export function Profile() {

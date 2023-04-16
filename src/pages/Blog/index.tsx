@@ -1,5 +1,5 @@
-import { Profile } from "../../components/Profile";
-import { Publications } from "../../components/Publications";
+import { Profile } from "./Profile";
+import { Publications } from "./Publications";
 
 export function Blog() {
     return (
