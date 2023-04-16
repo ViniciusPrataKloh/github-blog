@@ -1,5 +1,12 @@
+import { Profile } from "../../components/Profile";
+import { Publications } from "../../components/Publications";
+
 export function Blog() {
     return (
-        <h1>Blog</h1>
+        <div>
+            <Profile />
+
+            <Publications />
+        </div>
     )
 }
