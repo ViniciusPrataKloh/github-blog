@@ -8,6 +8,7 @@ export const ProfileContainer = styled.section`
 
     margin-top: -5rem;
     background: ${(props) => props.theme["base-profile"]};
+    border-radius: 6px;
 `
 
 export const ProfileContent = styled.div`

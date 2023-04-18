@@ -6,6 +6,7 @@ export const PostCardContainer = styled.div`
     gap: 1.125rem;
     padding: 2rem;
     background: ${(props) => props.theme["base-post"]};
+    border-radius: 6px;
 `
 export const Header = styled.header`
     display: flex;
