@@ -38,6 +38,25 @@ export const Header = styled.header`
     }
 `
 
+interface AvatarImageProps {
+    url: string;
+  }
+
+export const AvatarImage = styled.div<AvatarImageProps>`
+  min-width: 14.8rem;
+  height: 14.8rem;
+  
+  background-image: url(${({ url }) => url});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px;
+  @media (max-width: 660px) {
+    width: 14.8rem;
+    margin: 0 auto;
+  }
+`
+
 export const Description = styled.span`
     margin-top: 0.5rem;
     margin-bottom:  1.5rem;

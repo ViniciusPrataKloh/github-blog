@@ -26,3 +26,7 @@ export const Header = styled.header`
         line-height: 160%;
     }
 `
+
+export const PostCardSpan = styled.span`
+    text-decoration: none;
+`

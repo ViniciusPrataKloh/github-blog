@@ -1,40 +1,54 @@
 import { Buildings, GithubLogo, Link, Users } from "phosphor-react";
-import avatar from "../../../assets/avatar.png";
-import { Description, Footer, Header, ProfileContainer, ProfileContent } from "./styles";
+import { AvatarImage, Description, Footer, Header, ProfileContainer, ProfileContent } from "./styles";
+import { useEffect, useState } from "react";
+import { api } from "../../../lib/axios";
+import { IUser } from "../../../interfaces/UserInterface";
 
 export function Profile() {
+    const [userInfo, setUserInfo] = useState<IUser>({} as IUser); 
+
+    async function loadProfile(){
+        const response = await api.get('users/ViniciusPrataKloh');
+
+        setUserInfo(response.data);
+    }
+
+    useEffect(() => {
+        loadProfile()
+    }, [loadProfile])
+
     return (
         <ProfileContainer>
             <ProfileContent>
-                <img src={avatar} alt="" />
+                <AvatarImage url={userInfo.avatar_url}/>
+
                 <div>
                     <Header>
-                        <strong>Cameron Williamson</strong>
-                        <a href="#">
+                        <strong>{userInfo.name}</strong>
+                        <a href={userInfo.html_url}>
                             <span>GITHUB</span>
                             <Link />
                         </a>
                     </Header>
 
                     <Description>
-                        Tristique volutpat pulvinar vel massa,
-                        pellentesque egestas. Eu viverra massa quam
-                        dignissim aenean malesuada suscipit. Nunc,
-                        volutpat pulvinar vel mass.
+                        Tristique volutpat pulvinar vel massa, pellentesque egestas. 
+                        Eu viverra massa quam dignissim aenean malesuada suscipit. 
+                        Nunc, volutpat pulvinar vel mass.
                     </Description>
 
                     <Footer>
-                        <a href="#">
+                        <a href={userInfo.html_url}>
                             <GithubLogo />
-                            <span>cameronwll</span>
+                            <span>{userInfo.login}</span>
                         </a>
-                        <a href="#">
+                        <a href={userInfo.html_url}>
                             <Buildings />
-                            <span>Rocketseat</span>
+                            <span>{userInfo.company}</span>
                         </a>
-                        <a href="#">
+                        <a href={userInfo.followers_url}>
                             <Users />
-                            <span>32 seguidores</span>
+                            <span>{userInfo.followers} seguidores</span>
                         </a>
                     </Footer>
                 </div>
