@@ -41,7 +41,7 @@ export const Header = styled.header`
 export const Description = styled.span`
     margin-top: 0.5rem;
     margin-bottom:  1.5rem;
-    color: ${(props) => props.theme["base-text"]}
+    color: ${(props) => props.theme["base-text"]};
 `
 
 export const Footer = styled.footer`
@@ -50,6 +50,16 @@ export const Footer = styled.footer`
     align-items: center;
     justify-content: left;
     gap: 1.5rem;
+
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: ${(props) => props.theme["base-span"]};
+        line-height: 160%;
+        text-decoration: none;
+    }
 
     svg{
         margin-right: 0.5rem;

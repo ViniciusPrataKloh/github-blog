@@ -1,5 +1,12 @@
+import { PostContent } from "./PostContent";
+import { PostInfo } from "./PostInfo/index,";
+
 export function Post() {
     return (
-        <h1>Post</h1>
+        <>
+            <PostInfo />
+
+            <PostContent />
+        </>
     )
 }

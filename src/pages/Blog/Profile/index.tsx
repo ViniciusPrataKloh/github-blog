@@ -24,18 +24,18 @@ export function Profile() {
                     </Description>
 
                     <Footer>
-                        <div>
+                        <a href="#">
                             <GithubLogo />
                             <span>cameronwll</span>
-                        </div>
-                        <div>
+                        </a>
+                        <a href="#">
                             <Buildings />
                             <span>Rocketseat</span>
-                        </div>
-                        <div>
+                        </a>
+                        <a href="#">
                             <Users />
                             <span>32 seguidores</span>
-                        </div>
+                        </a>
                     </Footer>
                 </div>
             </ProfileContent>
