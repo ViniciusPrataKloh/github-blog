@@ -25,7 +25,7 @@ export function Profile() {
                 <div>
                     <Header>
                         <strong>{userInfo.name}</strong>
-                        <a href={userInfo.html_url}>
+                        <a href={userInfo.html_url} target="_blank">
                             <span>GITHUB</span>
                             <Link />
                         </a>
@@ -38,18 +38,18 @@ export function Profile() {
                     </Description>
 
                     <Footer>
-                        <a href={userInfo.html_url}>
+                        <div>
                             <GithubLogo />
                             <span>{userInfo.login}</span>
-                        </a>
-                        <a href={userInfo.html_url}>
+                        </div>
+                        <div>
                             <Buildings />
                             <span>{userInfo.company}</span>
-                        </a>
-                        <a href={userInfo.followers_url}>
+                        </div>
+                        <div>
                             <Users />
                             <span>{userInfo.followers} seguidores</span>
-                        </a>
+                        </div>
                     </Footer>
                 </div>
             </ProfileContent>
