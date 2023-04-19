@@ -22,5 +22,5 @@ export const StyledPostContent = styled.div`
 
 export const PostCode = styled.div`
     padding: 1rem 1rem;
-    background: ${(props) => props.theme["base-code"]};
+    background: ${(props) => props.theme["base-post"]};
 `
