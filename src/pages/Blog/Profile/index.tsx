@@ -15,7 +15,7 @@ export function Profile() {
 
     useEffect(() => {
         loadProfile()
-    }, [loadProfile])
+    }, [loadProfile]);
 
     return (
         <ProfileContainer>

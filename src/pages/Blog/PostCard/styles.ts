@@ -29,4 +29,5 @@ export const Header = styled.header`
 
 export const PostCardSpan = styled.span`
     text-decoration: none;
+    white-space: pre-line;
 `
