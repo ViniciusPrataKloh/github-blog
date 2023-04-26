@@ -9,7 +9,7 @@ export function Post() {
     const { number } = useParams();
     const [title, setTitle] = useState<string>("");
     const [user, setUser] = useState<string>("");
-    const [updatedAt, setUpdatedAt] = useState<string>("");
+    const [updatedAt, setUpdatedAt] = useState<Date>(new Date());
     const [comments, setComments] = useState<number>(0);
     const [body, setBody] = useState<string>("");
 

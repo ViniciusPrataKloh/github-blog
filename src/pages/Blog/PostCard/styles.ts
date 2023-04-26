@@ -13,11 +13,15 @@ export const Header = styled.header`
     align-items: center;
     justify-content: space-between;
 
-    strong{
-        color: ${(props) => props.theme["base-title"]};
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 160%;
+    a{
+        text-decoration: none;
+
+        strong{
+            color: ${(props) => props.theme["base-title"]};
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 160%;
+        }
     }
 
     span{

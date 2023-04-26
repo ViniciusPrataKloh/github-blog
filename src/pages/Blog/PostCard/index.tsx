@@ -12,14 +12,16 @@ export function PostCard({post}: IPostCardProps) {
 
     return (
         <PostCardContainer>
-            <a href={postRoute}>
+            
                 <Header>
-                    <strong>
-                        {post.title}
-                    </strong>
+                    <a href={postRoute}>
+                        <strong>
+                            {post.title}
+                        </strong>
+                    </a>
                     <span>
-                        {post.created_at}
-                    </span>
+                            {post.created_at}
+                     </span>
                 </Header>
 
                 <PostCardSpan>
@@ -33,7 +35,6 @@ export function PostCard({post}: IPostCardProps) {
                         })
                     }
                 </PostCardSpan>
-            </a>
         </PostCardContainer>
     )
 }

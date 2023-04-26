@@ -40,7 +40,7 @@ export const PostInfoContent = styled.div`
         font-weight: bold;
         font-size: 24px;
         line-height: 130%;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
     }
 `
 
