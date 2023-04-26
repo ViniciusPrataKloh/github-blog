@@ -1,7 +1,19 @@
 import {Calendar, CaretLeft, Chat, GithubLogo, Link} from "phosphor-react";
 import { Footer, PostInfoContainer, PostInfoContent } from "./styles";
 
-export function PostInfo(){
+interface PostInfoProps{
+    title: string;
+    user: string;
+    updatedAt: string;
+    comments: number; 
+}
+
+export function PostInfo({
+    title,
+    user,
+    updatedAt,
+    comments
+}: PostInfoProps){
     return(
         <PostInfoContainer>
             <PostInfoContent>
@@ -18,20 +30,20 @@ export function PostInfo(){
                 </a>
             </header>
 
-            <strong>JavaScript data types and data structures</strong>
+            <strong>{title}</strong>
 
             <Footer>
                 <a href="#">
                     <GithubLogo />
-                    <span>cameronwll</span>
+                    <span>{user}</span>
                 </a>
                 <a href="#">
                     <Calendar />
-                    <span>Há 1 dia</span>
+                    <span>{updatedAt}</span>
                 </a>
                 <a href="#">
                     <Chat />
-                    <span>5 comentários</span>
+                    <span>{comments} comentários</span>
                 </a>
             </Footer>
 

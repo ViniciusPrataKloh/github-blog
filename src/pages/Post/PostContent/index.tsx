@@ -1,25 +1,25 @@
 import { PostCode, PostContentContainer, StyledPostContent } from "./styles";
 
-export function PostContent(){
+interface PostContentProps{
+    body: string;
+}
+
+export function PostContent({body}: PostContentProps){
+    const bodyPhrases = body.split("\r\n");
+    const filteredBodyPhrases = bodyPhrases.filter(phrase => phrase !== "");
+
     return(
         <PostContentContainer>
             <StyledPostContent>
 
                 <div>
-                    <span>
-                    Programming languages all have built-in data structures, 
-                    but these often differ from one language to another. 
-                    This article attempts to list the built-in data structures 
-                    available in JavaScript and what properties they have. 
-                    These can be used to build other data structures. 
-                    Wherever possible, comparisons with other languages are drawn. <br/><br/>
-                    </span>
-                    <a href="#">
-                        Dynamic typing <br/>
-                    </a>
-                    <span>
-                        JavaScript is a loosely typed and dynamic language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:
-                    </span>
+                    {filteredBodyPhrases.map((phrase) => {
+                        return (
+                            <span>
+                                {phrase} <br/> <br/>
+                            </span>
+                        )
+                    })}
                 </div>
 
                 <PostCode>

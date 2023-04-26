@@ -8,7 +8,7 @@ interface IPostCardProps{
 export function PostCard({post}: IPostCardProps) {
     const postBodySpans = post.body.split("\r\r");
 
-    const postRoute = `http://localhost:5173/post:${post.id}`;
+    const postRoute = `http://localhost:5173/post/${post.number}`;
 
     return (
         <PostCardContainer>
