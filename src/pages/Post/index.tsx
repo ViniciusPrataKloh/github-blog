@@ -1,9 +1,8 @@
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { api } from "../../lib/axios";
 import { PostContent } from "./PostContent";
 import { PostInfo } from "./PostInfo";
-import { useContext, useEffect, useState } from "react";
-import { PostContext } from "../../context/PostContextProvides";
-import { api } from "../../lib/axios";
 
 export function Post() {
     const { number } = useParams();
@@ -13,7 +12,7 @@ export function Post() {
     const [comments, setComments] = useState<number>(0);
     const [body, setBody] = useState<string>("");
 
-    async function getPostInfo(){
+    async function getPostInfo() {
         const response = await api.get(`https://api.github.com/repos/ViniciusPrataKloh/dt-money/issues/${number}`);
         setTitle(response.data.title);
         setUser(response.data.user.login);
@@ -30,15 +29,15 @@ export function Post() {
 
     return (
         <>
-            <PostInfo 
+            <PostInfo
                 title={title}
                 user={user}
                 updatedAt={updatedAt}
                 comments={comments}
             />
 
-            <PostContent 
-                body={body}
+            <PostContent
+                content={body}
             />
         </>
     )

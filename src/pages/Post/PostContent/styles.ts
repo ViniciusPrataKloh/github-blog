@@ -18,9 +18,28 @@ export const StyledPostContent = styled.div`
         color: ${(props) => props.theme["brand-blue"]};
         text-decoration-line: underline;
     }
-`
 
-export const PostCode = styled.div`
-    padding: 1rem 1rem;
-    background: ${(props) => props.theme["base-post"]};
+    h1,h2,h3{
+        color: ${(props) => props.theme["base-title"]};
+    }
+
+    pre{
+        padding: 1rem 1rem;
+        background: ${(props) => props.theme["base-post"]};
+
+        > div {
+            background: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            code {
+                font-family: "FiraCode", monospace !important;
+                line-height: 160% !important;
+            }
+        }
+    }
+
+    ul {
+        list-style: inherit;
+        padding-left: 1.5rem;
+    }
 `
