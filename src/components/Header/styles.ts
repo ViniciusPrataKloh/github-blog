@@ -2,9 +2,7 @@ import styled from "styled-components";
 import cover from "../../assets/cover.png";
 
 export const HeaderContainer = styled.header`
-    background: url(${cover});
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background: url(${cover}) no-repeat center;
     background-size: cover;
     height: 212px;
 `

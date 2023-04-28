@@ -35,6 +35,13 @@ export const Header = styled.header`
         display: flex;
         gap: 0.5rem;
         text-decoration: none;
+
+        transition: 0.2s;
+
+        &:hover{
+            color: ${(props) => props.theme["base-text"]};
+            cursor: pointer;
+        }
     }
 `
 

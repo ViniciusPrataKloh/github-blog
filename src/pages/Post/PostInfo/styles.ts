@@ -28,10 +28,17 @@ export const PostInfoContent = styled.div`
             gap: 0.5rem;
 
             color: ${(props) => props.theme["brand-blue"]};
+            text-decoration: none;
             font-weight: bold;
             font-size: 12px;
             line-height: 160%;
             text-transform: uppercase;
+
+            transition: 0.2s;
+
+            &:hover{
+                color: ${(props) => props.theme["base-text"]};
+            }
         }
     }
 

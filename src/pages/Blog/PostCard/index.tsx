@@ -20,14 +20,13 @@ export function PostCard({ post }: IPostCardProps) {
     }
 
     return (
-        <PostCardContainer>
+        <PostCardContainer to={`/post/${post.number}`}>
 
             <Header>
-                <a href={postRoute}>
-                    <strong>
-                        {post.title}
-                    </strong>
-                </a>
+                <strong>
+                    {post.title}
+                </strong>
+
                 <span>
                     {formattedPassedTime}
                 </span>
@@ -37,9 +36,9 @@ export function PostCard({ post }: IPostCardProps) {
                 {
                     postBodySpans.map((bodySpan) => {
                         return (
-                            <span>
+                            <p>
                                 {bodySpan}
-                            </span>
+                            </p>
                         )
                     })
                 }
