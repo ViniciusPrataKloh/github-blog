@@ -16,11 +16,11 @@ export function SearchForm() {
         resolver: zodResolver(newSearchFormSchema)
     });
 
+    const { posts, handleSetFilter } = useContext(PostContext);
+
     const [filter, setFilter] = useState("");
 
-    const { handleSetFilter } = useContext(PostContext);
-
-    // handleSetFilter(watch("publication"));
+    const numberOfPublications = posts.length;
 
     function handleNewFormSubmit({ publication }: newSearchFormType) {
         setFilter(publication);
@@ -36,7 +36,7 @@ export function SearchForm() {
                 </strong>
 
                 <span>
-                    6 publicações
+                    {numberOfPublications} publicações
                 </span>
             </Header>
             <Form onSubmit={handleSubmit(handleNewFormSubmit)}>

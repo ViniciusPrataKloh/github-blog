@@ -9,8 +9,6 @@ interface IPostCardProps {
 export function PostCard({ post }: IPostCardProps) {
     const postBodySpans = post.body.split("\r\r");
 
-    const postRoute = `http://localhost:5173/post/${post.number}`;
-
     let passedTime = formatDateToPassedTimeInDays(post.created_at);
     let formattedPassedTime = formatPassedDaysToString(passedTime);
 
@@ -36,7 +34,7 @@ export function PostCard({ post }: IPostCardProps) {
                 {
                     postBodySpans.map((bodySpan) => {
                         return (
-                            <p>
+                            <p key={post.number}>
                                 {bodySpan}
                             </p>
                         )
