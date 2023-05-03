@@ -10,7 +10,7 @@
 
 ##  Projeto
 
-Pojeto 03 do Bootcamp Ignite da Rocketseat.
+Desafio 03 do Bootcamp Ignite da Rocketseat.
 
 ## ✨ Tecnologias
 
