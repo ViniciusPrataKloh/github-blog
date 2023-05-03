@@ -35,11 +35,13 @@ export const Header = styled.header`
         display: flex;
         gap: 0.5rem;
         text-decoration: none;
+        border: 2px solid transparent;
 
         transition: 0.2s;
 
         &:hover{
             color: ${(props) => props.theme["base-text"]};
+            border-bottom: 2px solid ${(props) => props.theme["brand-blue"]};
             cursor: pointer;
         }
     }

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const PostInfoContainer = styled.section`
@@ -33,11 +34,13 @@ export const PostInfoContent = styled.div`
             font-size: 12px;
             line-height: 160%;
             text-transform: uppercase;
+            border: 2px solid transparent;
 
             transition: 0.2s;
 
             &:hover{
                 color: ${(props) => props.theme["base-text"]};
+                border-bottom: 2px solid ${(props) => props.theme["brand-blue"]};
             }
         }
     }
@@ -70,5 +73,24 @@ export const Footer = styled.footer`
 
     svg{
         margin-right: 0.5rem;
+    }
+`
+
+export const BlogLink = styled(Link)`
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+
+    color: ${(props) => props.theme["brand-blue"]};
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 160%;
+    text-transform: uppercase;
+
+    transition: 0.2s;
+
+    &:hover{
+        color: ${(props) => props.theme["base-text"]};
     }
 `

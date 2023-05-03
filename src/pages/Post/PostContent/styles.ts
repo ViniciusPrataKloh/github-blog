@@ -20,7 +20,8 @@ export const StyledPostContent = styled.div`
     }
 
     strong, h1,h2,h3{
-        color: ${(props) => props.theme["base-title"]};
+        color: ${(props) => props.theme["brand-blue"]};
+        font-weight: bold;
     }
 
     pre{
