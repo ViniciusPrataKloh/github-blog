@@ -4,16 +4,17 @@ import { api } from "../lib/axios";
 
 interface IPostContext {
     posts: IPost[];
-    // filter: string;
     handleSetFilter: (filter: string) => void;
+    username: string;
+    repoName: string;
 }
 
 interface IPostContextProviderProps {
     children: ReactNode
 }
 
-const username = "ViniciusPrataKloh";
-const repoName = "dt-money;"
+const username = import.meta.env.VITE_GITHUB_USERNAME;
+const repoName = import.meta.env.VITE_GITHUB_REPONAME;
 
 export const PostContext = createContext({} as IPostContext);
 
@@ -23,7 +24,7 @@ export function PostContextProvider({ children }: IPostContextProviderProps) {
 
     async function loadPosts(query: string = "") {
         const response = await api.get(
-            `/search/issues?q=${query}%20repo:ViniciusPrataKloh/dt-money`
+            `/search/issues?q=${query}%20repo:${username}/${repoName}`
         );
         setPosts(response.data.items);
     }
@@ -41,8 +42,9 @@ export function PostContextProvider({ children }: IPostContextProviderProps) {
         <PostContext.Provider
             value={{
                 posts,
-                // filter,
-                handleSetFilter
+                handleSetFilter,
+                username,
+                repoName
             }}
         >
             {children}
