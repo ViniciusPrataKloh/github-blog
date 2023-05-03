@@ -19,7 +19,7 @@ export const StyledPostContent = styled.div`
         text-decoration-line: underline;
     }
 
-    h1,h2,h3{
+    strong, h1,h2,h3{
         color: ${(props) => props.theme["base-title"]};
     }
 
@@ -36,6 +36,10 @@ export const StyledPostContent = styled.div`
                 line-height: 160% !important;
             }
         }
+    }
+
+    img {
+        width: 100%;
     }
 
     ul {

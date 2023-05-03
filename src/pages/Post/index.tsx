@@ -14,13 +14,12 @@ export function Post() {
 
     async function getPostInfo() {
         const response = await api.get(`https://api.github.com/repos/ViniciusPrataKloh/dt-money/issues/${number}`);
+        // const response = await api.get(`https://api.github.com/repos/rocketseat-education/reactjs-github-blog-challenge/issues/1`);
         setTitle(response.data.title);
         setUser(response.data.user.login);
         setUpdatedAt(response.data.updated_at);
         setComments(response.data.comments);
         setBody(response.data.body);
-
-        console.log(response.data);
     }
 
     useEffect(() => {
