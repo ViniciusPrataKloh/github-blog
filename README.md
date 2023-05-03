@@ -26,7 +26,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
  - Manipulação de rotas, com React Router DOM
  - Validação de formulários com Zod
- - Context API, para implementação do contexto de transações
+ - Context API, para implementação do contexto de Posts
  - API do Github para busca dos repositórios e das issues
 
 ## Utilização do projeto
