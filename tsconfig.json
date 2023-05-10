@@ -21,7 +21,6 @@
     "jsx": "react-jsx",
     "types": [
       "node",
-      "webpack-env",
       "vite/client"
     ],
   },
